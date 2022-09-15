@@ -33,16 +33,18 @@ html {
 
 body {
 	position: relative;
+
 	height: 100vh;
+	overflow: hidden;
 }
 
 main {
+	display: grid;
+	place-items: center;
+
 	position: absolute;
 	inset: 0;
 	z-index: 1;
-
-	display: grid;
-	place-items: center;
 
 	min-height: 100vh;
 	background: var(--white);
@@ -56,7 +58,6 @@ p {
 h1 {
 	color: var(--red);
 	font-size: 3.5rem;
-	/* display: none; */
 }
 
 button {
@@ -67,62 +68,94 @@ div {
 	position: absolute;
 	inset: 0;
 
-	/* height: 100vh; */
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: slideOut;
+}
+
+@keyframes slideOut {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: calc(2 * 100vw);
+	}
 }
 
 #red-900 {
 	z-index: 10;
 
 	background: var(--red-900);
+
+	animation-delay: 0.5s;
 }
 
 #red-800 {
 	z-index: 9;
 
 	background: var(--red-800);
+
+	animation-delay: 1s;
 }
 
 #red-700 {
 	z-index: 8;
 
 	background: var(--red-700);
+
+	animation-delay: 1.5s;
 }
 
 #red-600 {
-	z-index: 7;
-
 	display: grid;
 	place-items: center;
 
+	z-index: 7;
+
 	background: var(--red-600);
+
+	animation-delay: 2.5s;
 }
+
+/* delta .2s */
 
 #red-500 {
 	z-index: 6;
 
 	background: var(--red-500);
+
+	animation-delay: 2.7s;
 }
 
 #red-400 {
 	z-index: 5;
 
 	background: var(--red-400);
+
+	animation-delay: 2.9s;
 }
 
 #red-300 {
 	z-index: 4;
 
 	background: var(--red-300);
+
+	animation-delay: 3s;
 }
 
 #red-200 {
 	z-index: 3;
 
 	background: var(--red-200);
+
+	animation-delay: 3.1s;
 }
 
 #red-100 {
 	z-index: 2;
 
 	background: var(--red-100);
+
+	animation-delay: 3.2s;
 }
