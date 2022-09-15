@@ -26,12 +26,103 @@ html {
 * {
 	margin: 0;
 	padding: 0;
+
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+	position: relative;
+	height: 100vh;
 }
 
 main {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+
 	display: grid;
 	place-items: center;
 
 	min-height: 100vh;
-	background: #800000;
+	background: var(--white);
+}
+
+p {
+	color: var(--white);
+	font-size: 3.7rem;
+}
+
+h1 {
+	color: var(--red);
+	font-size: 3.5rem;
+	/* display: none; */
+}
+
+button {
+	display: none;
+}
+
+div {
+	position: absolute;
+	inset: 0;
+
+	/* height: 100vh; */
+}
+
+#red-900 {
+	z-index: 10;
+
+	background: var(--red-900);
+}
+
+#red-800 {
+	z-index: 9;
+
+	background: var(--red-800);
+}
+
+#red-700 {
+	z-index: 8;
+
+	background: var(--red-700);
+}
+
+#red-600 {
+	z-index: 7;
+
+	display: grid;
+	place-items: center;
+
+	background: var(--red-600);
+}
+
+#red-500 {
+	z-index: 6;
+
+	background: var(--red-500);
+}
+
+#red-400 {
+	z-index: 5;
+
+	background: var(--red-400);
+}
+
+#red-300 {
+	z-index: 4;
+
+	background: var(--red-300);
+}
+
+#red-200 {
+	z-index: 3;
+
+	background: var(--red-200);
+}
+
+#red-100 {
+	z-index: 2;
+
+	background: var(--red-100);
 }
